@@ -1,0 +1,19 @@
+#!/bin/bash
+#KontInfo
+#V#####A#####R######I######A######B######L######E################
+DEFAULT_R=$(ip route show default | awk '/default/ {print $3}')
+IFACE=$(ip route show | awk '(NR == 2) {print $3}')
+MYIP=$(ip route show | awk '(NR == 2) {print $9}')
+#################################################################
+# SOURCE by xditx32 a.k.a Aditya Nur Rohman  			#
+# Thank's for PSP Linux & Network Security			#
+# Teknik IF UNSOED						# 
+#################################################################
+echo -e "
+OS Detection : \033[32m`uname -smr`\033[m
+Lokasi Script(◔◡◔):\033[32m$0\033[m
+Koneksi Info :---------------------------------------------------
+  Gateway: \033[32m$DEFAULT_R\033[m Interface: \033[32m$IFACE\033[m My Lan Ip: \033[32m$MYIP\033[m "
+
+
+
