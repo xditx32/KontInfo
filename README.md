@@ -1,0 +1,1 @@
+# KontInfo for Linux
